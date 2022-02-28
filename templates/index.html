@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Axie Breeding Recommendations</title>
+</head>
+<body>
+    <h1>Axie</h1>
+
+    {% for axie in axies %}
+        <li>{{ axie.axie_text }}</li>
+    {% endfor %}
+    <form method = 'POST'>
+        {{ template_form.hidden_tag() }}
+        <p>
+            {{ template_form.axie.label }}
+            {{ template_form.axie() }}
+        </p>
+        <p>
+            {{ template_form.submit() }}
+        </p>
+    </form>
+        
+</body>
+</html>
+
+
